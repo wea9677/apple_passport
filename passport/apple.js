@@ -19,7 +19,8 @@ module.exports = () =>{
                 urRMdoq1WFktvGdRbBZQBRrLORIi8MCAD+GxnwUs8hCAsd44HX5s+lW9JwgmFPgN
                 VSYP/Rbs
                 -----END PRIVATE KEY-----`,
-                // privateKeyLocation: "./config/AuthKey_79KCA9TG7S.p8",
+
+                privateKeyLocation: fs.readFileSync('./AuthKey_79KCA9TG7S.p8'),
                 // privateKeyPath: path.join(__dirname, "./config/AuthKey_79KCA9TG7S.p8"),
                 scope : "name email"
             }, async (req, accessToken, refreshToken, idToken, profile, cb) => {
