@@ -6,7 +6,7 @@ const user = require('../models/user');
 
 
 //애플 로그인
-
+console.log('요기 지나가나요?')
 const appleCallback = (req, res, next) =>{
     try {
         passport.authenticate(
