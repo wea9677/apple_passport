@@ -16,7 +16,8 @@ const appleCallback = (req, res, next) =>{
             (err, user, info) =>{
                 console.log("콜백 함수입니다.")
                 if (err) return next(err);
-
+                const idToken = jwt.decode(profile);
+                console.log(idToken,"이건가요")
                 const {userId, email, userName} = user;
 
                 const token = jwt.sign({userId}, process.env.MY_KEY, {

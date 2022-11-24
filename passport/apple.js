@@ -1,5 +1,5 @@
 require('dotenv').config();
-
+const path = require('path');
 const fs = require('fs');
 const passport = require('passport');
 const AppleStrategy = require('passport-apple').Strategy;
@@ -13,7 +13,8 @@ module.exports = () =>{
                 teamID: "3L7RW74HCJ",
                 callbackURL: "https://applepassport.herokuapp.com/apple/auth",
                 keyID: "79KCA9TG7S",
-                privateKeyLocation: "./config/AuthKey_79KCA9TG7S.p8",
+                // privateKeyLocation: "./config/AuthKey_79KCA9TG7S.p8",
+                privateKeyPath: path.join(__dirname, "./config/AuthKey_79KCA9TG7S.p8"),
                 scope : "email, name"
             }, async (req, accessToken, refreshToken, idToken, profile, cb) => {
                 console.log('apple profile :',
