@@ -3,7 +3,7 @@ require('dotenv').config();
 const fs = require('fs');
 const passport = require('passport');
 const AppleStrategy = require('passport-apple').Strategy;
-const {user} = require('../models');
+const user = require('../models');
 
 module.exports = () =>{
     passport.use(
@@ -24,11 +24,24 @@ module.exports = () =>{
 
                 );
                 try {
-                    
+                    const exUser = await user.findOne({
+                        where: {userId : idToken, provider : 'apple'},
+                    });
+
+                    if(exUser) {
+                        done(null, exUser);
+                    } else {
+                        const newUser = await user.create({
+                            userId : idToken.sub,
+                            email : idToken.email
+                        });
+                        done(null, newUser);
+                    }
                 } catch (error) {
-                    
+                    console.error(error);
+                    done(error);
                 }
-            }
-        )
-    )
-}
+            },
+        ),
+    );
+};
