@@ -12,9 +12,9 @@ const {
 
 //애플 로그인
 
-router.get('/apple', passport.authenticate('apple'));
+router.get('/login', appleCallback );
 
-router.post('/auth/apple', appleCallback);
+router.post('/apple', passport.authenticate('apple') );
 
 
 //로그인 인증
