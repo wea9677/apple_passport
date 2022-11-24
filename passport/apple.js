@@ -3,7 +3,7 @@ require('dotenv').config();
 const fs = require('fs');
 const passport = require('passport');
 const AppleStrategy = require('passport-apple').Strategy;
-const user = require('../models');
+const user = require('../models/user');
 
 module.exports = () =>{
     passport.use(

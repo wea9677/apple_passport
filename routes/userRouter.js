@@ -5,7 +5,8 @@ const authMiddleware = require('../middlewares/auth-middleware');
 // const User = require('../models/user');
 const router = express.Router();
 const {
-    appleCallback, checkMe
+    appleCallback,
+    checkMe
 } = require('../controller/userController');
 
 
@@ -17,7 +18,7 @@ router.post('/apple/auth', appleCallback);
 
 
 //로그인 인증
-router.get('/me', authMiddleware, checkMe);
+// router.get('/me', authMiddleware, checkMe);
 
 
 module.exports = router;
