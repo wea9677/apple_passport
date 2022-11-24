@@ -22,7 +22,7 @@ const appleCallback = (req, res, next) =>{
                 const token = jwt.sign({userId}, process.env.MY_KEY, {
                     expiresIn:"24h",
                 });
-
+                console.log(token, '토큰을 보여줘!')
                 result = {
                     userId,
                     email,
