@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 // const passport = require('passport');
 // const AppleStrategy = require('passport-apple');
 const UserRouter = require('./routes/userRouter');
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 
 mongoose.connect('mongodb+srv://wea9677:tmxkdlfl@cluster0.xmzro.mongodb.net/applelogintest'), {
