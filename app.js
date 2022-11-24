@@ -34,7 +34,7 @@ app.use('/auth', express.urlencoded({ extended: false}), UserRouter);
 
 app.listen(port, ()=>{
     console.log(`${port}로 서버가 열렸습니다.`)
-})
+});
 
 
 
