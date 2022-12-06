@@ -11,7 +11,7 @@ module.exports = () =>{
             {
                 clientID: "com.herokuapp.applepassport-web",
                 teamID: "3L7RW74HCJ",
-                callbackURL: "https://minor-teriann-wea9677.koyeb.app/apple/auth",
+                callbackURL: "https://minor-teriann-wea9677.koyeb.app/auth/apple",
                 keyID: "79KCA9TG7S",
                 privateKeyString:`-----BEGIN PRIVATE KEY-----
                 MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQg35mh/XmWhr0PdUjt
