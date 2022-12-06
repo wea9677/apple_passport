@@ -20,7 +20,7 @@ module.exports = () =>{
                 VSYP/Rbs
                 -----END PRIVATE KEY-----`,
 
-                privateKeyLocation: fs.readFileSync('./AuthKey_79KCA9TG7S.p8'),
+                // privateKeyLocation: fs.readFileSync('./AuthKey_79KCA9TG7S.p8'),
                 // privateKeyPath: path.join(__dirname, "./config/AuthKey_79KCA9TG7S.p8"),
                 scope : "name email"
                 
