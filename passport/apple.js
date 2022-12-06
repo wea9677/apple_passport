@@ -11,7 +11,7 @@ module.exports = () =>{
             {
                 clientID: "com.herokuapp.applepassport-web",
                 teamID: "3L7RW74HCJ",
-                callbackURL: "https://applepassport.herokuapp.com/auth/apple",
+                callbackURL: "https://minor-teriann-wea9677.koyeb.app/apple/auth",
                 keyID: "79KCA9TG7S",
                 privateKeyString:`-----BEGIN PRIVATE KEY-----
                 MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQg35mh/XmWhr0PdUjt
@@ -23,7 +23,9 @@ module.exports = () =>{
                 privateKeyLocation: fs.readFileSync('./AuthKey_79KCA9TG7S.p8'),
                 // privateKeyPath: path.join(__dirname, "./config/AuthKey_79KCA9TG7S.p8"),
                 scope : "name email"
+                
             }, async (req, accessToken, refreshToken, idToken, profile, cb) => {
+                console.log(privateKeyLocation, '키 값 자리')
                 console.log('여기를 넘어가야 할거 같은데요')
                 console.log('apple profile :',
                                 profile,
