@@ -14,7 +14,7 @@ const {
 
 router.get('/login', appleCallback );
 
-router.post('/apple', passport.authenticate('apple') );
+router.post('/auth/apple', passport.authenticate('apple') );
 
 
 //로그인 인증
