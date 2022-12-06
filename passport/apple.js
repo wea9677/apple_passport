@@ -13,14 +13,14 @@ module.exports = () =>{
                 teamID: "3L7RW74HCJ",
                 callbackURL: "https://minor-teriann-wea9677.koyeb.app/auth/apple",
                 keyID: "79KCA9TG7S",
-                privateKeyString:`-----BEGIN PRIVATE KEY-----
-                MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQg35mh/XmWhr0PdUjt
-                TJbTUpSJx86TNPIV5iiBKxrqxaCgCgYIKoZIzj0DAQehRANCAARt8pX8vdlVDIEN
-                urRMdoq1WFktvGdRbBZQBRrLORIi8MCAD+GxnwUs8hCAsd44HX5s+lW9JwgmFPgN
-                VSYP/Rbs
-                -----END PRIVATE KEY-----`,
+                // privateKeyString:`-----BEGIN PRIVATE KEY-----
+                // MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQg35mh/XmWhr0PdUjt
+                // TJbTUpSJx86TNPIV5iiBKxrqxaCgCgYIKoZIzj0DAQehRANCAARt8pX8vdlVDIEN
+                // urRMdoq1WFktvGdRbBZQBRrLORIi8MCAD+GxnwUs8hCAsd44HX5s+lW9JwgmFPgN
+                // VSYP/Rbs
+                // -----END PRIVATE KEY-----`,
 
-                // privateKeyLocation: fs.readFileSync('./AuthKey_79KCA9TG7S.p8'),
+                privateKeyLocation: fs.readFileSync('./AuthKey_79KCA9TG7S.p8'),
                 // privateKeyPath: path.join(__dirname, "./config/AuthKey_79KCA9TG7S.p8"),
                 scope : "name email"
                 
