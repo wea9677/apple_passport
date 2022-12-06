@@ -25,14 +25,14 @@ module.exports = () =>{
                 scope : "name email"
                 
             }, async (req, accessToken, refreshToken, idToken, profile, cb) => {
-                console.log(privateKeyString, '키 값 자리')
+                console.log(privateKeyLocation, '키 값 자리')
                 console.log('여기를 넘어가야 할거 같은데요')
                 console.log('apple profile :',
                                 profile,
                                 idToken,
                                 'access',
-                                accessToken,
-                                refreshToken
+                                accessToken
+                                
                 
                 );
                 console.log('여기까진 지나가나?')
